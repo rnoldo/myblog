@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %}{{ site.title }}: Archives{% endblock %} {% block content %}
+<!-- Content -->
+<div class="autopagerize_page_element">
+    <div class="content">
+        <ul class="list_with_title">
+            {% for month, posts in archive %}
+            <h3 class="listing_title">{{ month }}</h3>
+            <ul class='all-item'>
+                {% for post in posts %}
+                <li class="listing-item">
+                    <span class="fr">{{ post.date | date("%d %b %Y") }}</span>
+                    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% include 'include/paginator.html' %} {% endblock %}

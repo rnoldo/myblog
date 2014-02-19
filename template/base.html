@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}{% endblock%}</title>
+    <link href="/t/img/favicon.ico" rel="shortcut icon">
+    <link href="/t/style.css" rel="stylesheet" type="text/css" />
+    <link href="/t/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        {% include "include/header.html" %} {% include "include/nav.html" %} {% block content %}{% endblock %} {% include "include/footer.html" %}
+
+    </div>
+</body>
+
+</html>
